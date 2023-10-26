@@ -67,7 +67,7 @@ cat <<EOF >"$BUILD_SCRIPT"
     cd ffmpeg
 
     # Apply FFmpeg patches
-    find /ffbuild/patches/ffmpeg/ -name '*.patch' -exec git am {} +
+    find /ffbuild/patches/ffmpeg/ -name '*.patch' -exec patch -p1 -i {} +
 
     ./configure --prefix=/ffbuild/prefix --pkg-config-flags="--static" \$FFBUILD_TARGET_FLAGS $FF_CONFIGURE \
         --extra-cflags='$FF_CFLAGS' --extra-cxxflags='$FF_CXXFLAGS' \
