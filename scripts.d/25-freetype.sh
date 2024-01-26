@@ -32,6 +32,7 @@ ffbuild_dockerbuild() {
 
 ffbuild_configure() {
     echo --enable-libfreetype
+    echo --enable-libsnappy
 }
 
 ffbuild_unconfigure() {
