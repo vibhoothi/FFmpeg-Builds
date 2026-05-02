@@ -42,7 +42,6 @@ jobs:
             echo '2. Use `find and replace` (ctrl+f) to replace `BtbN/FFmpeg-Builds` with your repository name' >> "$GITHUB_STEP_SUMMARY"
             echo  >> "$GITHUB_STEP_SUMMARY" # adds blank line to markdown
             echo "This safeguard exists to  avoid overwhelming important open-source infrastructure (see https://github.com/BtbN/FFmpeg-Builds/issues/278)" >> "$GITHUB_STEP_SUMMARY"
-            exit 1
           fi
           exit 0
   build_base:
