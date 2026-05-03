@@ -35,6 +35,8 @@ cat <<EOF >"$BUILD_SCRIPT"
 
     git clone --filter=blob:none --branch='$GIT_BRANCH' '$FFMPEG_REPO' ffmpeg
     cd ffmpeg
+    git config user.email "actions@github.com"
+    git config user.name "Github Actions"
 
     # Apply FFmpeg patches
     for patch in /ffbuild/patches/ffmpeg/*.patch; do
